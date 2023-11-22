@@ -1,10 +1,11 @@
 <script lang="ts">
     import ButtonAtom from "$lib/components/atoms/Button.atom.svelte";
+    import YellowCompAtom from "./YellowComp.atom.svelte";
 </script>
 
 <div class="flex items-center justify-center">
     <div class="Teste flex">
-        <div class="Guzinho flex flex-col">
+        <div class="FlexG flex flex-col">
             <div>
                 <div class="rectangle2">
                     <p class="text-[60px] font-black pl-4">LET´S</p>
@@ -20,15 +21,19 @@
                     Live for Influential and Innovative fashion!
                 </p>
             </div>
-                <div>
-                    <ButtonAtom name = {"Shop Now"}/>
+            <div class="flex gap-8 mt-10">
+                <div class="align-center item-center place-content-center content-center relative top-4">
+                    <YellowCompAtom/>
                 </div>
+                <div class="Adjust">
+                    <ButtonAtom name = {"Shop Now"} fsize = {"50"}/>
+                </div>
+            </div>
         </div>
         <div>
             <img src="incediary.png" />
         </div>
     </div>
-    <div />
 </div>
 
 <style>
@@ -38,25 +43,39 @@
         border-radius: 59px;
     }
 
-    .Guzinho {
+    .FlexG {
         width: 40%;
         padding: 90px;
     }
     
     .rectangle {
         width: 300px;
-        height: 90px;
+        height: auto;
+        transform: rotate(-2deg);
+        flex-shrink: 0;
         background: #ebd96b;
     }
 
     .rectangle2 {
         width: 300px;
         height: 90px;
+        transform: rotate(-2deg);
+        flex-shrink: 0;
         background: white;
     }
 
     .subtitle {
         font-family: "Poppins", sans-serif;
         color: #191818;
+    }
+
+    .Adjust {
+        /* border: solid red; */
+        width: 180px;
+        font-size: 25px;
+        text-size-adjust: 30%;
+        text-align: center;
+        font-weight: 100;
+        
     }
 </style>

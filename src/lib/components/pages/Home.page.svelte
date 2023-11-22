@@ -3,6 +3,6 @@
     import Container from "$lib/components/atoms/Container.atom.svelte";
     import Footer from "$lib/components/atoms/FooterHome.atom.svelte";
 </script>
-<Navbar/>
+<!-- <Navbar/> -->
 <Container/>
 <Footer/>
