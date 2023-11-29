@@ -53,15 +53,17 @@
         }
     }
 
-    async function   (event: any) {                   
-        item.id = event.detail.item.id;
-        item.thumbpainel = event.detail.item.name;
-        item.title = event.detail.item.tipo;
-        item.subtitle = event.detail.item.categoriaId;
-        item.IsFav = event.detail.item.preco_custo;
-        item.discounstringt = event.detail.item.preco_final;
-    }
+    function base64ToImage(base64String: string): void {
+    const img = new Image();
+    img.src = base64String;
 
+        // Adicione a imagem ao corpo do documento ou a outro elemento HTML
+        document.body.appendChild(img);
+    }
+    
+    // Exemplo de uso
+    const base64String = 'data:image/png;base64,iVBORw...'; // Substitua isso pela sua string base64
+    base64ToImage(base64String);
 
 
 
