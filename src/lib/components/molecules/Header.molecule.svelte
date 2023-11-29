@@ -1,6 +1,11 @@
 <script lang="ts">
-        import ButtonAtom from "$lib/components/atoms/Button.atom.svelte";
+    import ButtonAtom from "$lib/components/atoms/Button.atom.svelte";
     import RouteshomeAtom from "../atoms/Routeshome.atom.svelte";
+    import GModal from "$lib/components/pages/Login.menu.svelte";
+    let showModal = false;
+    const handleClose = () => {
+        showModal = false;
+    }
 </script>
 
 <div class="Navbar">
@@ -9,11 +14,14 @@
     >
         <RouteshomeAtom/>
         <div class="Adjust">
-        <ButtonAtom />
+        <button on:click={() => showModal = true}>
+            <ButtonAtom />
+        </button>
         </div>
     </div>
 </div>
 
+<GModal show={showModal} on:close={handleClose}/>
 <style>
     .Navbar {
         font-family: "Poppins", sans-serif;

@@ -14,6 +14,7 @@
 <div class={`teste2 ${imgt} ${imgl}`}>
     <div class={`test`} >
         <!-- svelte-ignore a11y-missing-attribute -->
+
         <img src={`${imgpng}`} class={`${sfactor} ${imgt2} ${imgl2}`}/>
     </div>
     <div class="font flex">

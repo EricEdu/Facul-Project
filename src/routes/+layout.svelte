@@ -8,6 +8,7 @@
       import FooterEndpage from "$lib/components/pages/FooterEnd.page.svelte";
     import NavbarAtom from "$lib/components/organisms/Navbar.organism.svelte";
 </script>
+
 <NavbarAtom/>
 <slot/>
 <FooterEndpage/>
